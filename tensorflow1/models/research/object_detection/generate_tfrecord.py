@@ -20,7 +20,8 @@ from PIL import Image
 from object_detection.utils import dataset_util
 from collections import namedtuple, OrderedDict
 
-flags = tf.app.flags
+#flags = tf.app.flags
+flags=tf.compat.v1.flags.Flag
 flags.DEFINE_string('csv_input', '', 'Path to the CSV input')
 flags.DEFINE_string('image_dir', '', 'Path to the image directory')
 flags.DEFINE_string('output_path', '', 'Path to output TFRecord')
